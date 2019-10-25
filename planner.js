@@ -30,7 +30,10 @@ $(document).ready(function() {
                 .append(
                     $("<div>").text(hour).addClass("col-1 hour"),
                     $("<textarea>").addClass("col description"),
-                    $("<div>").text("save").addClass("col-1 saveBtn")
+                    $("<div>").addClass("col-1 saveBtn")
+                    .append(
+                        $("<i>").addClass("fas fa-save")
+                    )
                     .on("click", function() {
                         saveAgenda(hour);
                     })
