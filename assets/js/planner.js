@@ -32,6 +32,9 @@ $(document).ready(function() {
                 .append(
                     $("<div>").text(hour).addClass("col-1 hour"),
                     $("<textarea>").addClass("col description")
+                    .change(function() {
+                        showSaveBtn(hour);
+                    })
                     .keypress(function() {
                         showSaveBtn(hour);
                     })
