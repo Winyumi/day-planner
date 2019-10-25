@@ -79,6 +79,7 @@ h1 {
     font-size: 75%;
     font-weight: bold;
     letter-spacing: 1px;
+    cursor: default;
 }
 
 .past {
@@ -111,6 +112,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 /*
 .saveBtn i:hover {
