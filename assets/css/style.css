@@ -12,8 +12,14 @@ textarea {
     padding: 10px;
 }
 
+textarea:hover {
+    outline: 2px solid #43cae844;
+    outline-offset: -2px;
+}
+
 textarea:focus {
     outline: 2px solid #43cae8;
+    outline-offset: -2px;
 }
 
 .jumbotron {
