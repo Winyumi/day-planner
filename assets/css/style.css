@@ -33,7 +33,7 @@ textarea:focus {
     pointer-events: none;
 }
 
-.time-block {
+.timeblock {
     text-align: center;
     border-radius: 15px;
 }

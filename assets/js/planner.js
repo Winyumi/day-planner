@@ -27,7 +27,7 @@ $(document).ready(function() {
             // agendaItems[hour] = "";
             $("#timeblocks").append(
                 $("<div>")
-                .addClass("row time-block")
+                .addClass("row timeblock")
                 .attr("data-hour", hour)
                 .attr("spellcheck", "false")
                 .append(
@@ -86,7 +86,7 @@ $(document).ready(function() {
     function highlightHours() {
         var currentHour = moment().format("h A");
         var currentHourSet = false;
-        $("#timeblocks .time-block").each(function() {
+        $("#timeblocks .timeblock").each(function() {
             $(this).removeClass("past present future");
             if ($(this).attr("data-hour") == currentHour) {
                 $(this).addClass("present");
