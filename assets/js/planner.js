@@ -68,6 +68,9 @@ $(document).ready(function() {
 
     function saveAgenda(hour) {
         agendaItems[hour] = $(`.timeblock[data-hour="${hour}"] .description`).val().trim();
+        if (!agendaItems[hour]) {
+            delete agendaItems[hour];
+        }
         localStorage.setItem("agenda", JSON.stringify(agendaItems));
     }
 
