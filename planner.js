@@ -10,14 +10,9 @@ $(document).ready(function() {
 
     function init() {
         showCurrentDate();
+        getAgenda();
         buildTimeBlocks();
         highlightHours();
-
-        if (localStorage.getItem("agenda")) {
-            agendaItems = JSON.parse(localStorage.getItem("agenda"));
-            console.log(agendaItems);
-        }
-
     }
 
     function showCurrentDate() {
@@ -43,6 +38,13 @@ $(document).ready(function() {
             );
             loadAgenda(hour);
         });
+    }
+
+    function getAgenda() {
+        if (localStorage.getItem("agenda")) {
+            agendaItems = JSON.parse(localStorage.getItem("agenda"));
+            console.log(agendaItems);
+        }
     }
 
     function loadAgenda(hour) {
