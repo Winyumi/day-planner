@@ -35,6 +35,11 @@ $(document).ready(function() {
                     $("<textarea>").addClass("col description")
                     .keypress(function() {
                         showSaveBtn(hour);
+                    })
+                    .keydown(function(event) {
+                        if (event.key == "Delete" || event.key == "Backspace" ) {
+                            showSaveBtn(hour);
+                        }
                     }),
                     $("<div>").addClass("col-1 saveBtn hide")
                     .append(
