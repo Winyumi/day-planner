@@ -4,6 +4,9 @@ body {
     line-height: 1;
 }
 
+main {
+    margin: 0 0 50px;
+}
 textarea {
     background: transparent;
     border: none;
