@@ -79,5 +79,5 @@ textarea {
 }
 
 .saveBtn.hide {
-    display: none;
+    background-color: white;
 }
