@@ -78,6 +78,6 @@ textarea {
     transition: all .3s ease-in-out;
 }
 
-.hide {
+.saveBtn.hide {
     display: none;
 }
