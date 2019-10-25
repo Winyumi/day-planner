@@ -58,6 +58,10 @@ h1 {
     margin: 2em 0;
 }
 
+#timeblocks {
+    padding: 0 20px 0 10px;
+}
+
 .description {
     white-space: pre-wrap;
     padding: 10px;
