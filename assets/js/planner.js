@@ -99,6 +99,16 @@ $(document).ready(function() {
         });
     }
 
+    function clearAllTasks() {
+        if (confirm("Are you sure you want to clear all tasks?")) {
+            agendaItems = {};
+            localStorage.removeItem("agenda");
+            init();
+        }
+    }
+    $("#clear").on("click", function() {
+        clearAllTasks();
+    });
 
     var refreshTimer = setInterval(function() {
         showCurrentDate();

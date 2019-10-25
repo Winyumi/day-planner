@@ -7,6 +7,15 @@ body {
 main {
     margin: 0 0 50px;
 }
+
+#options {
+    margin: 50px 0;
+}
+
+#options .btn {
+    color: #009abd;
+}
+
 textarea {
     background: transparent;
     border: none;
