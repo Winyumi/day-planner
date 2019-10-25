@@ -59,34 +59,34 @@ $(document).ready(function() {
 
     function loadAgenda(hour) {
         if (agendaItems[hour]) {
-            $(`div[data-hour="${hour}"] .description`).text(agendaItems[hour]);
+            $(`.timeblock[data-hour="${hour}"] .description`).text(agendaItems[hour]);
         }
     }
 
     function saveAgenda(hour) {
-        agendaItems[hour] = $(`div[data-hour="${hour}"] .description`).val().trim();
+        agendaItems[hour] = $(`.timeblock[data-hour="${hour}"] .description`).val().trim();
         localStorage.setItem("agenda", JSON.stringify(agendaItems));
     }
 
     function showSaveBtn(hour) {
-        $(`div[data-hour="${hour}"] .saveBtn`).removeClass("hide");
+        $(`.timeblock[data-hour="${hour}"] .saveBtn`).removeClass("hide");
     }
 
     function hideSaveBtn(hour) {
-        $(`div[data-hour="${hour}"] .description`).addClass("lock");
-        $(`div[data-hour="${hour}"] .saveBtn i`).removeClass("fa-save").addClass("fa-check");
-        $(`div[data-hour="${hour}"] .saveBtn`).addClass("saved");
+        $(`.timeblock[data-hour="${hour}"] .description`).addClass("lock");
+        $(`.timeblock[data-hour="${hour}"] .saveBtn i`).removeClass("fa-save").addClass("fa-check");
+        $(`.timeblock[data-hour="${hour}"] .saveBtn`).addClass("saved");
         setTimeout(() => {
-        $(`div[data-hour="${hour}"] .description`).removeClass("lock");
-            $(`div[data-hour="${hour}"] .saveBtn`).removeClass("saved").addClass("hide");
-            $(`div[data-hour="${hour}"] .saveBtn i`).removeClass("fa-check").addClass("fa-save");
+        $(`.timeblock[data-hour="${hour}"] .description`).removeClass("lock");
+            $(`.timeblock[data-hour="${hour}"] .saveBtn`).removeClass("saved").addClass("hide");
+            $(`.timeblock[data-hour="${hour}"] .saveBtn i`).removeClass("fa-check").addClass("fa-save");
         }, 1000);
     }
 
     function highlightHours() {
         var currentHour = moment().format("h A");
         var currentHourSet = false;
-        $("#timeblocks .timeblock").each(function() {
+        $(".timeblock").each(function() {
             $(this).removeClass("past present future");
             if ($(this).attr("data-hour") == currentHour) {
                 $(this).addClass("present");
