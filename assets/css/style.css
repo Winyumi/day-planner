@@ -19,9 +19,25 @@ textarea:focus {
 .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color: #1e5680;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 5px solid #277794;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#currentdate {
+    color: #009abd;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 2em 0;
 }
 
 .description {
