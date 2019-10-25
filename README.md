@@ -7,6 +7,7 @@ Need to jot down your tasks for the day? Use this simple tool to list out what y
 All tasks will be saved on your browser locally. They will persist even after the browser is closed and reopened, until your browser cache has been emptied.
 
 Live Demo: https://winyumi.github.io/day-planner/
+
 Live Demo (full day mode): https://winyumi.github.io/day-planner/?all
 
 
