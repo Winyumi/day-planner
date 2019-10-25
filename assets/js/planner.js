@@ -29,13 +29,17 @@ $(document).ready(function() {
                 .attr("data-hour", hour)
                 .append(
                     $("<div>").text(hour).addClass("col-1 hour"),
-                    $("<textarea>").addClass("col description"),
-                    $("<div>").addClass("col-1 saveBtn")
+                    $("<textarea>").addClass("col description")
+                    .keypress(function() {
+                        showSaveBtn(hour);
+                    }),
+                    $("<div>").addClass("col-1 saveBtn hide")
                     .append(
                         $("<i>").addClass("fas fa-save")
                     )
                     .on("click", function() {
                         saveAgenda(hour);
+                        hideSaveBtn(hour);
                     })
                 )
             );
@@ -59,6 +63,14 @@ $(document).ready(function() {
     function saveAgenda(hour) {
         agendaItems[hour] = $(`div[data-hour="${hour}"] .description`).val().trim();
         localStorage.setItem("agenda", JSON.stringify(agendaItems));
+    }
+
+    function showSaveBtn(hour) {
+        $(`div[data-hour="${hour}"] .saveBtn`).removeClass("hide");
+    }
+
+    function hideSaveBtn(hour) {
+        $(`div[data-hour="${hour}"] .saveBtn`).addClass("hide");
     }
 
     function highlightHours() {
