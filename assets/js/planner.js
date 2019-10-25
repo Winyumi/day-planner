@@ -24,7 +24,6 @@ $(document).ready(function() {
     function buildTimeBlocks() {
         $("#timeblocks").empty();
         $.each(workHours, function(i, hour) {
-            // agendaItems[hour] = "";
             $("#timeblocks").append(
                 $("<div>")
                 .addClass("row timeblock")
