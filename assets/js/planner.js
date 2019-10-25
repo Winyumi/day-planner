@@ -81,7 +81,7 @@ $(document).ready(function() {
         $(`.timeblock[data-hour="${hour}"] .saveBtn i`).removeClass("fa-save").addClass("fa-check");
         $(`.timeblock[data-hour="${hour}"] .saveBtn`).addClass("saved");
         setTimeout(() => {
-        $(`.timeblock[data-hour="${hour}"] .description`).removeClass("lock");
+            $(`.timeblock[data-hour="${hour}"] .description`).removeClass("lock");
             $(`.timeblock[data-hour="${hour}"] .saveBtn`).removeClass("saved").addClass("hide");
             $(`.timeblock[data-hour="${hour}"] .saveBtn i`).removeClass("fa-check").addClass("fa-save");
         }, 1000);
