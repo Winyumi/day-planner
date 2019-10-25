@@ -72,7 +72,14 @@ $(document).ready(function() {
     }
 
     function hideSaveBtn(hour) {
-        $(`div[data-hour="${hour}"] .saveBtn`).addClass("hide");
+        $(`div[data-hour="${hour}"] .description`).addClass("lock");
+        $(`div[data-hour="${hour}"] .saveBtn i`).removeClass("fa-save").addClass("fa-check");
+        $(`div[data-hour="${hour}"] .saveBtn`).addClass("saved");
+        setTimeout(() => {
+        $(`div[data-hour="${hour}"] .description`).removeClass("lock");
+            $(`div[data-hour="${hour}"] .saveBtn`).removeClass("saved").addClass("hide");
+            $(`div[data-hour="${hour}"] .saveBtn i`).removeClass("fa-check").addClass("fa-save");
+        }, 1000);
     }
 
     function highlightHours() {

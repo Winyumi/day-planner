@@ -25,6 +25,10 @@ textarea {
     white-space: pre-wrap;
 }
 
+.description.lock {
+    pointer-events: none;
+}
+
 .time-block {
     text-align: center;
     border-radius: 15px;
@@ -66,7 +70,7 @@ textarea {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    background-color: #06aed5;
     color: white;
     display: flex;
     justify-content: center;
@@ -76,6 +80,11 @@ textarea {
 .saveBtn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
+}
+
+.saveBtn.saved {
+    background-color: white;
+    color: #06aed5;
 }
 
 .saveBtn.hide {
