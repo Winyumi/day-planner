@@ -24,11 +24,12 @@ $(document).ready(function() {
     function buildTimeBlocks() {
         $("#timeblocks").empty();
         $.each(workHours, function(i, hour) {
-            $("#timeblocks").append(
+            $("#timeblocks")
+            .attr("spellcheck", "false")
+            .append(
                 $("<div>")
                 .addClass("row timeblock")
                 .attr("data-hour", hour)
-                .attr("spellcheck", "false")
                 .append(
                     $("<div>").text(hour).addClass("col-1 hour"),
                     $("<textarea>").addClass("col description")
