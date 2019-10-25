@@ -76,12 +76,12 @@ textarea {
     justify-content: center;
     align-items: center;
 }
-
+/*
 .saveBtn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
 }
-
+*/
 .saveBtn.saved {
     background-color: white;
     color: #06aed5;
