@@ -36,7 +36,7 @@ $(document).ready(function() {
                         showSaveBtn(hour);
                     })
                     .keydown(function(event) {
-                        if (event.key == "Delete" || event.key == "Backspace" ) {
+                        if ($(this).val() && (event.key == "Delete" || event.key == "Backspace")) {
                             showSaveBtn(hour);
                         }
                     }),
