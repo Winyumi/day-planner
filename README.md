@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Need to jot down your tasks for the day? Use this simple tool to list out what you need to do! Each time block is highlighted based on the current time of the day, where the current hour is lit up and the past and future hours are more faded.
+Need to jot down your tasks for the day? Use this simple tool to list out what you need to do! The hours are highlighted based on the current time of the day, where the current hour is lit and the past and future hours are faded.
 
 All tasks will be saved on your browser locally. They will persist even after the browser is closed and reopened, until your browser cache has been emptied.
 
@@ -22,7 +22,7 @@ No installation required. Simply launch the web page and use right away.
 
 2. Type in your task.
 
-3. Click on the save button to save!
+3. Click on the save button that appears to save the task.
 
 
 ## Credits
