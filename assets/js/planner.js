@@ -29,6 +29,7 @@ $(document).ready(function() {
                 $("<div>")
                 .addClass("row time-block")
                 .attr("data-hour", hour)
+                .attr("spellcheck", "false")
                 .append(
                     $("<div>").text(hour).addClass("col-1 hour"),
                     $("<textarea>").addClass("col description")
