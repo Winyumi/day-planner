@@ -134,6 +134,7 @@ h1 {
 */
 .saveBtn.saved {
     background-color: white;
+    border-radius: 0;
     color: #06aed5;
 }
 
