@@ -26,6 +26,7 @@ $(document).ready(function() {
         $.each(workHours, function(i, hour) {
             $("#timeblocks")
             .attr("spellcheck", "false")
+            .addClass("container")
             .append(
                 $("<div>")
                 .addClass("row timeblock")
