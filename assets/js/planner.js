@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     var workHours = ["9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM"];
 
+    // Full day mode
     if (window.location.search.substring(1).match(/all/gi)) {
         var workHours = ["12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM","9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM"];
     }
@@ -32,19 +33,25 @@ $(document).ready(function() {
                 .addClass("row timeblock")
                 .attr("data-hour", hour)
                 .append(
+                    // Hour
                     $("<div>").text(hour).addClass("col-1 hour"),
+                    // Text field
                     $("<textarea>").addClass("col description")
+                    // For better Android mobile browser support
                     .change(function() {
                         showSaveBtn(hour);
                     })
+                    // Check for most key inputs
                     .keypress(function() {
                         showSaveBtn(hour);
                     })
+                    // Check for delete and backspace key inputs
                     .keydown(function(event) {
                         if ($(this).val() && (event.key == "Delete" || event.key == "Backspace")) {
                             showSaveBtn(hour);
                         }
                     }),
+                    // Save button
                     $("<div>").addClass("col-1 saveBtn hide")
                     .append(
                         $("<i>").addClass("fas fa-save")
@@ -55,6 +62,7 @@ $(document).ready(function() {
                     })
                 )
             );
+            // Preload any existing task
             loadAgenda(hour);
         });
     }
